@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-.flex-container {
-  display:flex; flex-direction:column; justify-content:center; align-items:center;
-}
-</style>
-</head>
-<body>
-
-<div class=”flex-container”>
-  <div class=”flex-item”>Flex Item 1</div>
-  <div class=”flex-item”>Flex Item 2</div>
-</div>
-
-</body>
+  <head>
+    <title>Flexbox cards</title>
+    <style>
+      h2 {
+        color: #024E95;
+        font-family: Roboto, Helvetica, sans-serif;
+      }
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: minimum;
+        padding: 40px;
+        border: 1px dashed #666;
+      }
+      .card {
+        flex: 1; /* Allows boxes to grow and shrink equally */
+        flex-basis: max-content; /* Prefer maximum width until wrap */
+        text-align: center;
+        vertical-align: center;
+        min-width: 413px;
+        max-width: 559px;
+        /* width: 100%; */
+        height: 156px;
+        line-height: 156px;
+        margin: 5px;
+        border-radius: 0px;
+        font-family: Roboto, Helvetica, sans-serif;
+        color: White;
+        background-color: Red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Flexbox cards</h2>
+    <div class="flex-container">
+      <div class="card">1</div>
+      <div class="card">2</div>
+      <div class="card">3</div>
+      <div class="card">4</div>
+    </div>
+  </body>
+</html>
