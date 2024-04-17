@@ -16,7 +16,7 @@
         margin: 0 0 40px 0;
         border: 1px dashed #666;
       }
-      .card4column, .card4to8column, .card8column {
+      .card4column, .card4to8column, .card4columnToFull, .card8column {
         flex: 1; /* Allows boxes to grow and shrink equally */
         flex-basis: max-content; /* Prefer maximum width until wrap */
         text-align: center;
@@ -31,20 +31,26 @@
       .card4column {
         min-width: 413px;
         max-width: 559px;
-        color: White;
-        background-color: Red;
+        color: #024E95;
+        background-color: #B1E2FB;
       }
       .card4to8column {
         min-width: 413px;
         max-width: 1142px;
+        color: #024E95;
+        background-color: #21ADF2;
+      }
+      .card4columnToFull {
+        min-width: 413px;
+        max-width: 1142px;
         color: White;
-        background-color: Blue;
+        background-color: #006EB7;
       }
       .card8column {
         min-width: 851px;
         max-width: 1142px;
         color: White;
-        background-color: Green;
+        background-color: #024E95;
       }
     </style>
   </head>
@@ -61,6 +67,12 @@
       <div class="card4to8column">4-8 column card</div>
       <div class="card4to8column">4-8 column card</div>
       <div class="card4to8column">4-8 column card</div>
+    </div>
+    <div class="flex-container">
+      <div class="card4columnToFull">4 column to full width card</div>
+      <div class="card4columnToFull">4 column to full width card</div>
+      <div class="card4columnToFull">4 column to full width card</div>
+      <div class="card4columnToFull">4 column to full width card</div>
     </div>
     <div class="flex-container">
       <div class="card8column">8 column card</div>
