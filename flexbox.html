@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox cards</title>
+    <style>
+      body {
+        /* background-image: url("images/breakpoint_guide.png"); */
+        margin: 0;
+        font-family: Roboto, Helvetica, sans-serif;
+        max-width: 2560px;
+      }
+      h2 {
+        margin: 24px 40px 24px 40px;
+        color: #024E95;
+      }
+      #Flex-body {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border: 0;
+      }
+      #Flex-body #Nav {
+        flex: none;
+        flex-basis: 72px;
+        height: 720px%;
+        width: 72px;
+        color: White;
+        background-color: #7D7B7B;
+        text-align: center;
+      }
+      #Flex-body #Main {
+        flex: 1;
+        height: max-content;
+        width: 100%;
+        background-color: #F9F7F7;
+      }
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: minimum;
+        padding: 0;
+        margin: 0;
+        border: 1px dashed #666;
+      }
+      .card4column, .card4to8column, .card4columnToFull, .card8column {
+        flex: 1; /* Allows boxes to grow and shrink equally */
+        flex-basis: max-content; /* Prefer maximum width until wrap */
+        text-align: center;
+        /* vertical-align: center; */
+        /* width: 100%; */
+        height: 80px;
+        line-height: 80px;
+        margin: 12px;
+        border-radius: 0px;
+      }
+      .card4column {
+        min-width: 412px;
+        max-width: 560px;
+        color: #024E95;
+        background-color: #B1E2FB;
+      }
+      .card4to8column {
+        min-width: 413px;
+        max-width: 1142px;
+        color: #024E95;
+        background-color: #21ADF2;
+      }
+      .card4columnToFull {
+        min-width: 413px;
+        max-width: 100%;
+        color: White;
+        background-color: #006EB7;
+      }
+      .card8column {
+        min-width: 851px;
+        max-width: 1142px;
+        color: White;
+        background-color: #024E95;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="Flex-body">
+      <div id="Nav">
+        <p>Nav</p>
+      </div>
+      <div id="Main">
+        <h2>Flexbox cards</h2>
+        <div class="flex-container">
+          <div class="card4column">4 column card</div>
+          <div class="card4column">4 column card</div>
+          <div class="card4column">4 column card</div>
+          <div class="card4column">4 column card</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
