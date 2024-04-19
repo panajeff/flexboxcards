@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Grid + Flexbox cards</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Roboto, Helvetica, sans-serif;
+        min-width: 568px;
+        max-width: 1560px;
+      }
+      h2 {
+        margin: 24px 40px 24px 40px;
+        color: #024E95;
+      }
+      #Flex-body {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 100%;
+        width: Auto;
+        padding: 0;
+        margin: 0;
+        border: 0;
+      }
+      #Flex-body #Nav {
+        flex: none;
+        flex-basis: 72px;
+        height: 720px%;
+        width: 72px;
+        color: White;
+        background-color: #7D7B7B;
+        text-align: center;
+      }
+      #Flex-body #Content {
+        flex: 1;
+        height: 100%;
+        width: Auto;
+        background-color: #F9F7F7;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(416px, 1fr));
+        grid-gap: 24px;
+        /* justify-content: start; */
+        /* justify-items: start; */
+        /* align-content: start; */
+        padding: 0;
+        margin: 0 40px 0 40px;
+        border: 1px dashed #666;
+      }
+      .card4column {
+        text-align: center;
+        height: 80px;
+        line-height: 80px;
+        margin: 0;
+        border-radius: 0px;
+        min-width: 412px;
+        max-width: 560px;
+        color: #024E95;
+        background-color: #B1E2FB;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="Flex-body">
+      <div id="Nav">
+        <p>Nav</p>
+      </div>
+      <div id="Content">
+        <h2>CSS Grid + Flexbox cards</h2>
+        <div class="container">
+          <div class="card4column">4 column card</div>
+          <div class="card4column">4 column card</div>
+         <div class="card4column">4 column card</div>
+          <div class="card4column">4 column card</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
