@@ -4,6 +4,7 @@
     <title>CSS Grid + Flexbox cards</title>
     <style>
       body {
+        /* background-image: url("images/breakpoint_guide.png"); */
         margin: 0;
         font-family: Roboto, Helvetica, sans-serif;
         min-width: 568px;
@@ -38,27 +39,55 @@
         width: Auto;
         background-color: #F9F7F7;
       }
-      .container {
+      .container4column, .container8column, .container4-8column, .container8-12column {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(416px, 1fr));
         grid-gap: 24px;
-        /* justify-content: start; */
-        /* justify-items: start; */
-        /* align-content: start; */
         padding: 0;
-        margin: 0 40px 0 40px;
+        margin: 0 40px 24px 40px;
         border: 1px dashed #666;
       }
-      .card4column {
+      .container4column {
+        grid-template-columns: repeat(auto-fit, minmax(416px, 1fr));
+      }
+      .container8column {
+        grid-template-columns: repeat(auto-fit, minmax(856px, 1fr));
+      }
+      .container4-8column {
+        grid-template-columns: repeat(auto-fit, minmax(416px, 1fr));
+      }
+      .container8-12column {
+        grid-template-columns: repeat(auto-fit, minmax(856px, 1fr));
+      }
+      .card4column, .card8column, .card4-8column, .card8-12column {
         text-align: center;
         height: 80px;
         line-height: 80px;
         margin: 0;
         border-radius: 0px;
+      }
+      .card4column {
         min-width: 416px;
         max-width: 640px;
         color: #024E95;
         background-color: #B1E2FB;
+      }
+      .card8column {
+        min-width: 856px;
+        max-width: 1304px;
+        color: white;
+        background-color: #1F2950;
+      }
+      .card4-8column {
+        min-width: 416px;
+        max-width: 1304px;
+        color: #024E95;
+        background-color: #F7CD54;
+      }
+      .card8-12column {
+        min-width: 856px;
+        max-width: 1736px;
+        color: white;
+        background-color: #E52828;
       }
     </style>
   </head>
@@ -69,11 +98,23 @@
       </div>
       <div id="Content">
         <h2>CSS Grid + Flexbox cards</h2>
-        <div class="container">
+        <div class="container4column">
           <div class="card4column">4 column card (416px - 640px)</div>
           <div class="card4column">4 column card (416px - 640px)</div>
          <div class="card4column">4 column card (416px - 640px)</div>
           <div class="card4column">4 column card (416px - 640px)</div>
+        </div>
+        <div class="container4-8column">
+          <div class="card4-8column">4-8 column card (416px - 1304px)</div>
+          <div class="card4-8column">4-8 column card (416px - 1304px)</div>
+        </div>
+       <div class="container8column">
+          <div class="card8column">8 column card (856px - 1304px)</div>
+          <div class="card8column">8 column card (856px - 1304px)</div>
+        </div>
+        <div class="container8-12column">
+          <div class="card8-12column">8-12 column card (856px - 1736px)</div>
+          <div class="card8-12column">8-12 column card (856px - 1736px)</div>
         </div>
       </div>
     </div>
