@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Box model - Scorecard v0.1</title>
+    <style>
+      body {
+        /* background-image: url("images/breakpoint_guide.png"); */
+        margin: 0;
+        font-family: Roboto, Helvetica, sans-serif;
+        min-width: 1008px;
+        max-width: 2560px;
+      }
+      #Flex-body {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 100%;
+        width: Auto;
+        padding: 0;
+        margin: 0;
+        border: 0;
+      }
+      #Flex-body #Nav {
+        flex: none;
+        flex-basis: 72px;
+        height: 720px%;
+        width: 72px;
+        color: White;
+        background-color: #7D7B7B;
+        text-align: center;
+      }
+      #Flex-body #Content {
+        flex: 1;
+        height: 100%;
+        width: Auto;
+        padding: 0 40px 120px 40px;
+        background-color: #F9F7F7;
+      }
+      div.grid-container, div.grid-hero-container {
+        display: grid;
+        grid-gap: 24px;
+        grid-template-columns: repeat(8, 1fr);
+        margin-bottom:24px;
+      }
+      div.grid-hero-container {
+        grid-gap: 0px;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+
+      header, article.oneColumn, article.fourColumn {
+        text-align: center;
+        height: 80px;
+        line-height: 80px;
+        margin: 0;
+        border-radius: 0px;
+      }
+      header {
+        margin-bottom: 24px;
+        color: White;
+        background-color: #C5C3C3;
+      }
+
+      div.hero-header, div.hero-footer {
+        grid-column: 1 / span 8;
+        color: #1F2950;
+        background-color: #B1E2FB;
+        text-align: center;
+      }
+      div.hero-value, div.hero-viz {
+        text-align: center;
+        height: 80px;
+        line-height: 80px;
+      }
+      div.hero-value {
+        grid-column: 1 / span 2;
+        color: #1F2950;
+        background-color: #006EB7;
+        text-align: center;
+      }
+      div.hero-viz {
+        grid-column: 3 / span 6;
+        color: #1F2950;
+        background-color: #21ADF2;
+      }
+      article.oneColumn {
+        color: White;
+        background-color: #C5C3C3;
+      }
+      article.fourColumn {
+        color: White;
+        background-color: #E52828;
+        grid-column: auto / span 4;
+        }
+      @media screen and (min-width: 1449px) {
+        div.grid-container, div.grid-hero-container {
+          grid-template-columns:  repeat(12, 1fr);
+        }
+        div.hero-header, div.hero-footer {
+        grid-column: 1 / span 12;
+        }
+        div.hero-viz {
+        grid-column: 3 / span 10;
+        }
+      }
+      @media screen and (min-width: 1888px) {
+        div.grid-container, div.grid-hero-container {        
+          grid-template-columns:  repeat(16, 1fr);
+        }
+        div.hero-header, div.hero-footer {
+        grid-column: 1 / span 16;
+        }
+        div.hero-viz {
+        grid-column: 3 / span 14;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="Flex-body">
+      <div id="Nav">
+        <p>Nav</p>
+      </div>
+      <div id="Content">
+        <h6>Box model: Scorecard v0.1</h6>
+        <header>
+          <p>Header</p>
+        </header>
+        <main>
+          <div class="grid-hero-container">
+            <div class="hero-header">Hero header (8-16)</div>
+            <div class="hero-value">Hero value (2)</div>
+            <div class="hero-viz">Hero viz (6-12)</div>
+            <div class="hero-footer">Hero footer (8-16)</div>
+          </div>
+          <div class="grid-container">
+            <article class="fourColumn">
+              <p>4</p>
+            </article>
+            <article class="fourColumn">
+              <p>4</p>
+            </article>
+            <article class="fourColumn">
+              <p>4</p>
+            </article>
+            <article class="fourColumn">
+              <p>4</p>
+            </article>
+            <article class="fourColumn">
+              <p>4</p>
+            </article>
+            <article class="fourColumn">
+              <p>4</p>
+            </article>
+          </div>
+          <div class="grid-container">
+            <article class="oneColumn">
+              <p>1</p>
+            </article>
+            <article class="oneColumn">
+              <p>1</p>
+            </article>
+            <article class="oneColumn">
+              <p>1</p>
+            </article>
+            <article class="oneColumn">
+              <p>1</p>
+            </article>
+            <article class="oneColumn">
+              <p>1</p>
+            </article>
+            <article class="oneColumn">
+              <p>1</p>
+            </article>
+            <article class="oneColumn">
+              <p>1</p>
+            </article>
+            <article class="oneColumn">
+              <p>1</p>
+            </article>
+            <article class="oneColumn">
+              <p>1</p>
+            </article>
+            <article class="oneColumn">
+              <p>1</p>
+            </article>
+            <article class="oneColumn">
+              <p>1</p>
+            </article>
+            <article class="oneColumn">
+              <p>1</p>
+            </article>
+            <article class="oneColumn">
+              <p>1</p>
+            </article>
+            <article class="oneColumn">
+              <p>1</p>
+            </article>
+            <article class="oneColumn">
+              <p>1</p>
+            </article>
+            <article class="oneColumn">
+              <p>1</p>
+            </article>
+        </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
